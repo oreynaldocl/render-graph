@@ -6,13 +6,13 @@ using GraphExcercise.models;
 namespace TestGraphExcercise
 {
     [TestClass]
-    public class QueuePrinterTest
+    public class ChildrenPrinterTest
     {
         IPrinter queue;
         [TestInitialize]
         public void AssemblyInit()
         {
-            this.queue = new QueuePrinter();
+            this.queue = new ChildrenPrinter();
         }
 
         [TestMethod]
@@ -40,7 +40,7 @@ namespace TestGraphExcercise
             Node right = new Node("C");
             string result = queue.printTexts(new Node("A", left, right));
 
-            Assert.AreEqual(result, "A,B,C", "doesn't render root and first level");
+            Assert.AreEqual(result, "A,B,C", "doesn't render root and its children");
         }
 
         [TestMethod]
@@ -53,7 +53,7 @@ namespace TestGraphExcercise
             Node right = new Node("C", new Node("E"), new Node("F"));
             string result = queue.printTexts(new Node("A", left, right));
 
-            Assert.AreEqual(result, "A,B,C,D,E,F", "doesn't render all levels");
+            Assert.AreEqual(result, "A,B,C,D,E,F", "doesn't render all children");
         }
     }
 }
