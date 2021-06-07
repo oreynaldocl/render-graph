@@ -19,9 +19,7 @@ const renderGraph = (graph) => {
   }
   return resultQueue.join(',');
 }
-//       A
-//    B     C
-//   D     E F
+
 const graph = {
   text: 'A',
   left: {
