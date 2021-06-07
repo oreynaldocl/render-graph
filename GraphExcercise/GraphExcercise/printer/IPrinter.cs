@@ -7,6 +7,6 @@ namespace GraphExcercise.printer
 {
     public interface IPrinter
     {
-        public String readTexts(Node root);
+        public String printTexts(Node root);
     }
 }

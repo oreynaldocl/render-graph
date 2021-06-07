@@ -8,9 +8,16 @@ namespace GraphExcercise.models
     public class Node {
         private Node left;
         private Node right;
-        private String text;
+        private string text;
 
-        public Node(String text, Node left, Node right)
+        public Node(string text)
+        {
+            this.text = text;
+            this.left = null;
+            this.right = null;
+        }
+
+        public Node(string text, Node left, Node right)
         {
             this.text = text;
             this.left = left;

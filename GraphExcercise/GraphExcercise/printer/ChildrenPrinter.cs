@@ -7,7 +7,7 @@ namespace GraphExcercise.printer
 {
     public class ChildrenPrinter : IPrinter
     {
-        public string readTexts(Node root)
+        public string printTexts(Node root)
         {
             throw new NotImplementedException();
         }

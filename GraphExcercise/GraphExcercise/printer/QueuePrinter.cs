@@ -7,9 +7,13 @@ namespace GraphExcercise.printer
 {
     public class QueuePrinter : IPrinter
     {
-        public string readTexts(Node root)
+        public string printTexts(Node root)
         {
-            throw new NotImplementedException();
+            if (root == null)
+            {
+                return "";
+            }
+            return root.Text;
         }
     }
 }
