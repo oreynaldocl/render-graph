@@ -30,5 +30,30 @@ namespace TestGraphExcercise
 
             Assert.AreEqual(result, "A", "doesn't render root level");
         }
+
+        [TestMethod]
+        public void RenderOnlyRootAndFirstLevel()
+        {
+            //   A
+            //  B  C
+            Node left = new Node("B");
+            Node right = new Node("C");
+            string result = queue.printTexts(new Node("A", left, right));
+
+            Assert.AreEqual(result, "A,B,C", "doesn't render root and first level");
+        }
+
+        [TestMethod]
+        public void RenderExcerciseInterview()
+        {
+            //     A
+            //  B     C
+            // D     E F
+            Node left = new Node("B", new Node("D"), null);
+            Node right = new Node("C", new Node("E"), new Node("F"));
+            string result = queue.printTexts(new Node("A", left, right));
+
+            Assert.AreEqual(result, "A,B,C,D,E,F", "doesn't render root and first level");
+        }
     }
 }
